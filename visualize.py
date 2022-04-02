@@ -1,4 +1,3 @@
-from turtle import color
 from graphviz import Digraph
 
 f = Digraph('finite_state_machine', filename='fsm.gv')
