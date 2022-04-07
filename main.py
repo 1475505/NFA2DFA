@@ -1,6 +1,7 @@
 class State(object):
     def __init__(self):
         self.state = []
+
     def __str__(self):
         return str(self.state)
 
@@ -10,8 +11,10 @@ class transfer(object):
         self.start = start
         self.end = end
         self.cond = cond
+
     def __str__(self):
         return str(self.start) + "---" + str(self.cond) + "-->" + str(self.end)
+
 
 class FA(object):
     def __init__(self):
@@ -19,14 +22,19 @@ class FA(object):
         self.trans = []
         self.startstates = []
         self.endstates = []
+
     def addstate(self):
         pass
-    def addtrans(self):#传入Transfer类型
+
+    def addtrans(self):  # 传入Transfer类型
         pass
+
     def addstartstate(self):
         pass
+
     def addendstate(self):
         pass
+
     def __str__(self):
         str = ""
         for i in self.trans:
@@ -36,6 +44,7 @@ class FA(object):
 
 def BFS():
     pass
+
 
 def main():
     NFA = FA()
@@ -47,6 +56,7 @@ def main():
     DFA = FA()
     BFS()
     print(DFA)
+
 
 if __name__ == '__main__':
     main()
