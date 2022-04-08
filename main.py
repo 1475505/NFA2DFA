@@ -1,3 +1,6 @@
+import visualise
+
+
 class Transfer(object):
     def __init__(self, start, end: list, cond):  # 这里传入State类型
         self.start = start
@@ -111,6 +114,7 @@ def main():
     NFA.construct(nfa_in)
     DFA = toDFA(NFA)
     print(DFA, end='')
+    visualise.visualise(DFA)
 
 
 if __name__ == '__main__':
