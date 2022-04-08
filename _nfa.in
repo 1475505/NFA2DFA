@@ -1,0 +1,18 @@
+StartState:
+q0
+EndState:
+q
+States:
+q0 q
+Inputs:
+a b
+Transfer:
+-
+q0
+a-q0-q
+b-q
+-
+q
+a-NoS
+b-q0-q
+-
