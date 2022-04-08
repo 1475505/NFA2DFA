@@ -114,7 +114,8 @@ def main():
     NFA.construct(nfa_in)
     DFA = toDFA(NFA)
     print(DFA, end='')
-    visualise.visualise(DFA)
+    visualise.visualiseN(NFA)
+    visualise.visualiseD(DFA)
 
 
 if __name__ == '__main__':
