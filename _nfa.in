@@ -1,18 +1,22 @@
 StartState:
-q0
+p
 EndState:
-q
+r
 States:
-q0 q
+p q r
 Inputs:
-a b
+0 1
 Transfer:
 -
-q0
-a-q0-q
-b-q
+p
+0-q
+1-NoS
 -
 q
-a-NoS
-b-q0-q
+0-q
+1-q-r
+-
+r
+0-NoS
+1-NoS
 -
