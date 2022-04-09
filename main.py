@@ -21,11 +21,11 @@ class FA(object):
 
     # 构造 NFA
     def construct(self, ipt):
-        self.addstate(ipt[ipt.index('States:')+1])
-        self.addinput(ipt[ipt.index('Inputs:')+1])
-        self.addstartstate(ipt[ipt.index('StartState:')+1])
-        self.addendstate(ipt[ipt.index('EndState:')+1])
-        self.addtrans(ipt[ipt.index('Transfer:')+1:])
+        self.addstate(ipt[ipt.index('States:') + 1])
+        self.addinput(ipt[ipt.index('Inputs:') + 1])
+        self.addstartstate(ipt[ipt.index('StartState:') + 1])
+        self.addendstate(ipt[ipt.index('EndState:') + 1])
+        self.addtrans(ipt[ipt.index('Transfer:') + 1:])
 
     def addstate(self, states):
         states = states.split(' ')
@@ -34,8 +34,8 @@ class FA(object):
 
     def addtrans(self, transList):  # 传入Transfer类型
         splt = [i for i, x in enumerate(transList) if x == '-']
-        for i in range(len(splt)-1):
-            transfer = transList[splt[i]+1:splt[i+1]]
+        for i in range(len(splt) - 1):
+            transfer = transList[splt[i] + 1:splt[i + 1]]
             start = transfer[0]
             for i in range(1, len(transfer)):
                 tmp = transfer[i].split('-')
@@ -54,9 +54,9 @@ class FA(object):
 
     def __str__(self):
         s = ""
-        s += '开始状态:\n'+str(self.startstates[0][0])+'\n'
-        s += '接收状态:\n'+str(self.endstates).replace('\'', '')+'\n'
-        s += '输入字符:\n'+str(self.inputs).replace('\'', '')+'\n'
+        s += '开始状态:\n' + str(self.startstates[0][0]) + '\n'
+        s += '结束状态:\n' + str(self.endstates).replace('\'', '') + '\n'
+        s += '输入字符:\n' + str(self.inputs).replace('\'', '') + '\n'
         s += '状态转移:\n'
         for i in self.trans:
             s += str(i).replace('\'', '') + "\n"

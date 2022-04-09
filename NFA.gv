@@ -1,13 +1,12 @@
 digraph NFA {
 	rankdir=LR size="8,5"
 	node [shape=doublecircle]
-	q
+	r
 	node [shape=circle]
-	q0 -> q0 [label=a]
-	q0 -> q [label=a]
-	q0 -> q [label=b]
-	q -> q0 [label=b]
-	q -> q [label=b]
+	p -> q [label=0]
+	q -> q [label=0]
+	q -> q [label=1]
+	q -> r [label=1]
 	node [shape=none]
-	"" -> q0
+	"" -> p
 }

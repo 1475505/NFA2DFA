@@ -1,13 +1,14 @@
 digraph DFA {
 	rankdir=LR size="8,5"
 	node [shape=doublecircle]
-	"[q, q0]"
-	"[q]"
+	"[q, r]"
 	node [shape=circle]
-	"[q0]" -> "[q, q0]" [label=a]
-	"[q0]" -> "[q]" [label=b]
-	"[q, q0]" -> "[q, q0]" [label=a]
-	"[q, q0]" -> "[q, q0]" [label=b]
+	"[p]" -> "[q]" [label=0]
+	"[p]" -> "[Ø]" [label=1]
+	"[q]" -> "[q]" [label=0]
+	"[q]" -> "[q, r]" [label=1]
+	"[q, r]" -> "[q]" [label=0]
+	"[q, r]" -> "[q, r]" [label=1]
 	node [shape=none]
-	"" -> "[q0]"
+	"" -> "[p]"
 }
